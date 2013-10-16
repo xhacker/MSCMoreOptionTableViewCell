@@ -47,6 +47,12 @@ typedef void (^MSCMoreOptionTableViewCellConfigurationBlock)(UIButton *deleteCon
 
 @interface MSCMoreOptionTableViewCell : UITableViewCell
 
+/*
+ * Set the content offset of the inner scroll view to zero,
+ * hide the confirmation view.
+ */
+- (void)revertToOriginalState;
+
 @property (nonatomic, weak) id<MSCMoreOptionTableViewCellDelegate> delegate;
 @property (nonatomic, copy) MSCMoreOptionTableViewCellConfigurationBlock configurationBlock;
 
